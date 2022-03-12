@@ -1,30 +1,101 @@
-<!DOCTYPE HTML>
-<html lang=es>
-	<head>
-		<title>Desarrollo Aplicaciones Web</title>
-	</head>
-	<body>
-		<div style="background-color: yellowgreen;">
-		<!--EncBEZADO-->
-		<h1>Practica 2: Github</h1>
-		<p> Hola, esta es mi primera linea de parrafo en un bloque color verde<br>
-		esta es mi segunda linea dentro de parrafo <br>
-		<font size="6" color="#ff0000"> Este es otra linea con letra mas grande y color diferente </font> </p>
-		<img src="Imagenes/Mia.jpg" alt="Aldo Samaniego" title="IMAGENMIA">
-		</div>
-		<hr/>
-		<div style="background-color: goldenrod;"> 
-			<h1>Aqui pondre otro parafo pero en un bloque que tendra color cafe</h1>
-			<p>este es mi parrafo pero en fondo cafe<br>
-			<a href="https://tec.mx">Esta es la pagina de mi universidad</a></p>
-			<form>
-				<label for="texto">Texto</label>
-				<input type="text" name="text" placeholder="escribe el texto"/>
-				<label for="button">Button</label>
-				<input type="button" value="click"/>
-			</form>
-		</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>5779</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+  <style>
+    .navbar{
+      color:aliceblue;
+      text-align: center;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .navbar-nav{
+      float: left;
 
-	</body>
-
+    }
+    #icon{
+      height: 10em;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="row">
+        <div class="navbar-header col-sm-12">
+        <h2>Aldo Samaniego</h2>
+      </div>
+      <div class="navbar-header col-sm-12">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <!--li class="active"><a href="#">Home</a></li-->
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Awards</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container text-center">
+      <h2>Education</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/TEC.jpg" id="icon">
+        </div>
+        <div class="col-sm-6">
+          <img src="img/ITMO.png" id="icon">
+        </div>
+      </div>
+  </div>
+  <div class="container text-center">
+    <h2>Projects</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="img/@HOME.jpg" id="icon">
+        <h4>Roborregos @HOME</h4>
+      </div>
+      <div class="col-sm-4">
+        <img src="img/MAZE.jpg" id="icon">
+        <h4>Roborregos MAZE</h4>
+      </div>
+      <div class="col-sm-4">
+        <img src="img/WEB.jpg" id="icon">
+        <h4>Roborregos WEB</h4>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">
+    <h2>Awards</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="img/first.png" id="icon">
+        <h4>1st Place Maze MX</h4>
+      </div>
+      <div class="col-sm-4">
+        <img src="img/hardware.png" id="icon">
+        <h4>Best Hardware Maze, Sydney</h4>
+      </div>
+      <div class="col-sm-4">
+        <img src="img/second.png" id="icon">
+        <h4>2nd Place @HOME MX</h4>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
+
+
