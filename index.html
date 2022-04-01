@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+    <title>Document</title>
+    <style>
+    .navbar{
+      color:aliceblue;
+      text-align: center;
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: rgb(238, 203, 4);
+    }
+    .boton{
+        background-color: rgb(238, 203, 4);
+        border: 0;
+        height: 100%;
+        text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+    <div id="app"> {{ message }} 
+        <nav class="navbar">
+            <div class="container">
+                <button class="boton" v-on:click="Cancun = true,Merida = false, Tulum = false, PlayaDC = false, Cozumel = false">Cancun</button>
+                <button class="boton" v-on:click="Cancun = false,Merida = true, Tulum = false, PlayaDC = false, Cozumel = false">Merida</button>
+                <button class="boton" v-on:click="Cancun = false,Merida = false, Tulum = true, PlayaDC = false, Cozumel = false">Tulum</button>
+                <button class="boton" v-on:click="Cancun = false,Merida = false, Tulum = false, PlayaDC = true, Cozumel = false">Playa Del Carmen</button>
+                <button class="boton" v-on:click="Cancun = false,Merida = false, Tulum = false, PlayaDC = false, Cozumel = true">Cozumel</button>
+            </div>
+        </nav>
+        <div>
+            <div v-if="Cancun">
+                <h1>Cancun</h1>
+                <div v-show="campo">
+                    <h3>Seleccionaste "{{campo}}"</h3>
+                </div>
+                <select class="container" v-model="campo">
+                    <option v-for="campo in campos">{{campo}}</option>
+                </select>
+                <div v-if="campo==='Mapa'">
+                    <img src="img/Cancun-Mapa.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Logo'">
+                    <img src="img/Cancun-Letras.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Mejor Atractivo'">
+                    <img src="img/Cancun-Atractivo.jpg" style="height: 20em;" />
+                </div>
+            </div>
+            <div v-if="Merida">
+                <h1>Merida</h1>
+                <div v-show="campo">
+                    <h3>Seleccionaste "{{campo}}"</h3>
+                </div>
+                <select class="container" v-model="campo">
+                    <option v-for="campo in campos">{{campo}}</option>
+                </select>
+                <div v-if="campo==='Mapa'">
+                    <img src="img/Merida-Mapa.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Logo'">
+                    <img src="img/Merida-Letras.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Mejor Atractivo'">
+                    <img src="img/Merida-Atractivo.jpg" style="height: 20em;" />
+                </div>
+
+            </div>
+            <div v-if="Tulum">
+                <h1>Tulum</h1>
+                <div v-show="campo">
+                    <h3>Seleccionaste "{{campo}}"</h3>
+                </div>
+                <select class="container" v-model="campo">
+                    <option v-for="campo in campos">{{campo}}</option>
+                </select>
+                <div v-if="campo==='Mapa'">
+                    <img src="img/Tulum-Mapa.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Logo'">
+                    <img src="img/Tulum-Letras.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Mejor Atractivo'">
+                    <img src="img/Tulum-Atractivo.jpg" style="height: 20em;" />
+                </div>
+                
+            </div>
+            <div v-if="PlayaDC">
+                <h1>Playa Del Carmen</h1>
+                <div v-show="campo">
+                    <h3>Seleccionaste "{{campo}}"</h3>
+                </div>
+                <select class="container" v-model="campo">
+                    <option v-for="campo in campos">{{campo}}</option>
+                </select>
+                <div v-if="campo==='Mapa'">
+                    <img src="img/PlayaDC-Mapa.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Logo'">
+                    <img src="img/PlayaDC-Letras.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Mejor Atractivo'">
+                    <img src="img/PlayaDC-Atractivo.jpg" style="height: 20em;" />
+                </div>
+                
+            </div>
+            <div v-if="Cozumel">
+                <h1>Cozumel</h1>
+                <div v-show="campo">
+                    <h3>Seleccionaste "{{campo}}"</h3>
+                </div>
+                <select class="container" v-model="campo">
+                    <option v-for="campo in campos">{{campo}}</option>
+                </select>
+                <div v-if="campo==='Mapa'">
+                    <img src="img/Cozumel-Mapa.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Logo'">
+                    <img src="img/Cozumel-Letras.jpg" style="height: 20em;" />
+                </div>
+                <div v-if="campo==='Mejor Atractivo'">
+                    <img src="img/Cozumel-Atractivo.jpg" style="height: 20em;" />
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    Cancun : false,
+                    Merida : false,
+                    Tulum : false,
+                    PlayaDC : false,
+                    Cozumel : false,
+                    campos : ['Mapa','Logo','Mejor Atractivo'],
+                    campo : ""
+                }
+            }
+        }).mount('#app');
+    </script>    
+</body>
+</html>
